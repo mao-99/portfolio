@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 export default function Blog() {
-
+    useEffect(()=>{
+        document.title = "Blog | Mubarak"
+    }, [])
     // Sample blog posts data
     const blogPosts = [
         {
