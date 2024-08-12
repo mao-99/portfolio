@@ -28,14 +28,24 @@ export default function Blog() {
 
     return (
         <>
-            <h1>My Blog</h1>
             <div className="blog-posts">
-                {blogPosts.map((post) => (
-                    <div key={post.id} className="blog-post">
-                        <h2>{post.title}</h2>
-                        <p>{post.excerpt}</p>
-                        <a href={`/posts/${post.id}`}>Read More</a>
+                {blogPosts.map((post, index) => (
+                    <div key={index} className="carouselCard card">
+                    <h1 className="cardText">{post.title}</h1>
+                    <div id={`carouselExampleControls${index}`} className="carousel slide" data-bs-ride="carousel">
+                        <button className="carousel-control-prev carouselControlButton" type="button" data-bs-target={`#carouselExampleControls${index}`} data-bs-slide="prev">
+                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span className="visually-hidden">Previous</span>
+                        </button>
+                        <button className="carousel-control-next carouselControlButton" type="button" data-bs-target={`#carouselExampleControls${index}`} data-bs-slide="next">
+                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span className="visually-hidden">Next</span>
+                        </button>
                     </div>
+                    <div className="card-body">
+                        <p className="cardText">{post.content}</p>
+                    </div>
+            </div>
                 ))}
             </div>
         </>
