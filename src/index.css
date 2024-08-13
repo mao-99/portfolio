@@ -24,8 +24,8 @@ html, body {
 /* Body styles */
 body {
   color: white;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -133,6 +133,10 @@ a:hover, .active {
   border-radius: 0.5rem;
 }
 
+.mobileNavIcon{
+  display: none;
+}
+
 .carouselCardImage {
   width: 80%;
   height: auto;
@@ -166,4 +170,46 @@ section{
 .homeHeader{
   padding: 1rem;
   color: #5AAFA5;
+}
+
+@media (max-width: 816px) {
+  /* Your CSS rules go here */
+  .navIcon{
+    display: none;
+  }
+  .mobileNavIcon{
+    display: flex;
+    border-radius: 1rem;
+  }
+  .socialsDiv{
+    width: 65%;
+  }
+  h1{
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
+  .headerMain{
+    padding-top: 2rem;
+    margin: 0;
+  }
+  .linksDiv a{
+    margin: 1rem;
+  }
+  .homeSection{
+    margin: 0 auto;
+    margin-top: 2rem;
+    width: 90%;
+  }
+  .homeHeader{
+    margin: 0;
+  }
+  .bio{
+    padding: 0;
+  }
+  .carouselCard {
+    width: 90%;
+    margin: 1rem auto;
+    border-radius: 1rem;
+  }
+
 }

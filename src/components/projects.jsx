@@ -15,34 +15,36 @@ export default function Projects() {
 
     return (
         <>
-            {projects.map((project, index) => (
-                <div key={index} className="carouselCard card">
-                    <h1 className="cardText">{project.title}</h1>
-                    <div id={`carouselExampleControls${index}`} className="carousel slide" data-bs-ride="carousel">
-                        <div className="carousel-inner">
-                            {project.pictures.map((picture, picIndex) => (
-                                <div key={picIndex} className={`carousel-item ${picIndex === 0 ? "active" : ""}`}>
-                                    <img src={picture} className="carouselCardImage" alt="Project Demo Image" />
-                                </div>
-                            ))}
+            <section className="projectSection">
+                {projects.map((project, index) => (
+                    <div key={index} className="carouselCard card">
+                        <h1 className="cardText">{project.title}</h1>
+                        <div id={`carouselExampleControls${index}`} className="carousel slide" data-bs-ride="carousel">
+                            <div className="carousel-inner">
+                                {project.pictures.map((picture, picIndex) => (
+                                    <div key={picIndex} className={`carousel-item ${picIndex === 0 ? "active" : ""}`}>
+                                        <img src={picture} className="carouselCardImage" alt="Project Demo Image" />
+                                    </div>
+                                ))}
+                            </div>
+                            <button className="carousel-control-prev carouselControlButton" type="button" data-bs-target={`#carouselExampleControls${index}`} data-bs-slide="prev">
+                                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span className="visually-hidden">Previous</span>
+                            </button>
+                            <button className="carousel-control-next carouselControlButton" type="button" data-bs-target={`#carouselExampleControls${index}`} data-bs-slide="next">
+                                <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span className="visually-hidden">Next</span>
+                            </button>
                         </div>
-                        <button className="carousel-control-prev carouselControlButton" type="button" data-bs-target={`#carouselExampleControls${index}`} data-bs-slide="prev">
-                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span className="visually-hidden">Previous</span>
-                        </button>
-                        <button className="carousel-control-next carouselControlButton" type="button" data-bs-target={`#carouselExampleControls${index}`} data-bs-slide="next">
-                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span className="visually-hidden">Next</span>
-                        </button>
+                        <div className="card-body">
+                            <p className="cardText">{project.description}</p>
+                            <p>
+                                GitHub: <a href={project.link}>{project.title} repo</a>
+                            </p>
+                        </div>
                     </div>
-                    <div className="card-body">
-                        <p className="cardText">{project.description}</p>
-                        <p>
-                            GitHub: <a href={project.link}>{project.title} repo</a>
-                        </p>
-                    </div>
-                </div>
-            ))}
+                ))}
+            </section>
         </>
     );
 }

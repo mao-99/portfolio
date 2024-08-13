@@ -16,9 +16,9 @@ export default function Layout() {
                         </div>
                         
                         <div className="socialsDiv">
-                            <a href='https://www.github.com/mao-99' target="_blank"><img alt='GitHub' className="navIcon" src='https://img.shields.io/badge/Github-100000?style=for-the-badge&logo=GitHub&logoColor=1E293B&labelColor=AEBDD5&color=AEBDD5'/></a>
-                            <a href='https://discordapp.com/users/mao.nda' target="_blank"><img alt='discord' className="navIcon" src='https://img.shields.io/badge/Discord-100000?style=for-the-badge&logo=discord&logoColor=1E293B&labelColor=28534e&color=28534e'/></a>
-                            <a href='https://www.linkedin.com/in/modufade' target="_blank"><img alt='linkedin' className="navIcon" src='https://img.shields.io/badge/LinkedIn-100000?style=for-the-badge&logo=linkedin&logoColor=1E293B&labelColor=AEBDD5&color=AEBDD5'/></a>
+                            <a href='https://www.github.com/mao-99' target="_blank"><img alt='GitHub' className="navIcon" src='https://img.shields.io/badge/Github-100000?style=for-the-badge&logo=GitHub&logoColor=1E293B&labelColor=AEBDD5&color=AEBDD5'/><img alt='GitHub' className="mobileNavIcon" src='https://img.shields.io/badge/-100000?style=for-the-badge&logo=GitHub&logoColor=1E293B&labelColor=AEBDD5&color=AEBDD5'/></a>
+                            <a href='https://discordapp.com/users/mao.nda' target="_blank"><img alt='discord' className="navIcon" src='https://img.shields.io/badge/Discord-100000?style=for-the-badge&logo=discord&logoColor=1E293B&labelColor=28534e&color=28534e'/><img alt='GitHub' className="mobileNavIcon" src='https://img.shields.io/badge/-100000?style=for-the-badge&logo=discord&logoColor=1E293B&labelColor=AEBDD5&color=AEBDD5'/></a>
+                            <a href='https://www.linkedin.com/in/modufade' target="_blank"><img alt='linkedin' className="navIcon" src='https://img.shields.io/badge/LinkedIn-100000?style=for-the-badge&logo=linkedin&logoColor=1E293B&labelColor=AEBDD5&color=AEBDD5'/><img alt='GitHub' className="mobileNavIcon" src='https://img.shields.io/badge/-100000?style=for-the-badge&logo=linkedin&logoColor=1E293B&labelColor=AEBDD5&color=AEBDD5'/></a>
                         </div>
                     </nav>
                 </div>
